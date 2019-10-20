@@ -1,7 +1,9 @@
-# path to PA and translator tracks
+# path to PA track
 inputPA="specimen/PA-orig.wav"
 # alternative (-re is for real time so that ffmpeg is not quiting if at eof)
 # inputPA="http://st02.dlf.de/dlf/02/128/mp3/stream.mp3"
+
+# path to Translator track
 inputDolm="specimen/Dolm1-orig.wav"
 
 # possible options: -ss SECs
@@ -9,3 +11,29 @@ inputStarttime="-ss 75"
 
 # possible options: quiet, panic, fatal, error, warning, info. verbose. debug, trace
 inputLoglevel="-loglevel warning"
+
+### Filter Parameter
+## PA
+# parameter dynaudnorm
+para_pa_leveler="p=0.35:r=1:f=300"
+
+## TRANSLATOR
+# parameter compand as gate
+para_trans_gate="attacks=0:points=-80/-115|-55.1/-80|-55/-55|20/20"
+# parameter compand as limiter
+para_trans_limiter="attacks=0:points=-80/-80|-12/-12|20/-12"
+# parameter dynaudnorm
+para_trans_leveler="p=0.35:r=1:f=300"
+
+## MIX
+# parameter volume for both tracks
+para_mix_vol_pa="0.1"
+para_mix_vol_trans="1.0"
+# parameter dynaudnorm
+para_mix_leveler="p=0.35:r=1:f=300"
+# paramter loudnorm
+para_mix_loudnorm="i=-16.0:lra=12.0:tp=-3.0"
+
+## VIEW
+# parameter for the 3 ebur128 views
+para_ebur128=meter=18:video=1:size=640x480:scale=relative:gauge=s:target=-16
