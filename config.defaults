@@ -1,0 +1,12 @@
+# path to PA and translator tracks
+inputPA="specimen/PA-orig.wav"
+# alternative (-re is for real time so that ffmpeg is not quiting if at eof)
+# inputPA="http://st02.dlf.de/dlf/02/128/mp3/stream.mp3 -re"
+inputDolm="specimen/Dolm1-orig.wav"
+
+# possible options: -ss SECs
+inputStarttime="-ss 75"
+
+# possible options: quiet, panic, fatal, error, warning, info. verbose. debug, trace
+inputLoglevel="-loglevel warning"
+
