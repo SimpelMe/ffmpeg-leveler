@@ -19,6 +19,16 @@ locations, override the values by adding the settings to the `config.user` file.
 * $inputDolm - translator above ducked pa
 * $inputStarttime - default 75s, because recording was starting before talk
 * $inputLoglevel - default warning, use the ffmpeg options
+* $para_pa_leveler - parameter dynaudnorm for pa
+* $para_trans_gate - parameter compand as gate for translator
+* $para_trans_limiter - parameter compand as limiter for translator
+* $para_trans_leveler - parameter dynaudnorm for translator
+* $para_mix_vol_pa - parameter volume of pa in the mix
+* $para_mix_vol_trans - parameter volume of translator in the mix
+* $para_mix_leveler - parameter dynaudnorm for the whole mix
+* $para_mix_loudnorm - parameter loudnorm for the whole mix
+* $para_ebur128 - parameter for the ebur128 views
+
 
 ## Flowchart
 The flowchart.md shows the audio flow excluding the points where to listen to.
