@@ -4,8 +4,11 @@ inputDolm=$(<inputDolm.txt)
 echo "$inputDolm"
 inputStarttime=$(<inputStarttime.txt)
 echo "$inputStarttime"
+inputLoglevel=$(<inputLoglevel.txt)
+echo "$inputLoglevel"
 
-ffmpeg -thread_queue_size 8291 -filter_complex_threads 64 \
+ffmpeg -hide_banner $inputLoglevel \
+-thread_queue_size 8291 -filter_complex_threads 64 \
 $inputStarttime $inputPA \
 -thread_queue_size 8192 \
 $inputStarttime $inputDolm \
