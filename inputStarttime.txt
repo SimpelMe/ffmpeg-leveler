@@ -1,0 +1,4 @@
+-ss 75
+
+# First line is the used one lines below can be used to comment or save some options
+# possible options:
