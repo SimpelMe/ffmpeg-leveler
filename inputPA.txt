@@ -2,3 +2,5 @@ PA-orig.wav
 
 # First line is the used one lines below can be used to comment or save some options
 # possible options:
+http://st02.dlf.de/dlf/02/128/mp3/stream.mp3 -re
+# -re is for real time so that ffmpeg is not quiting if at eof
