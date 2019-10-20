@@ -3,7 +3,7 @@
 # Source files with all default settings
 . "$PWD/config.defaults"
 # source optional users custom config
-[ -f "$PWD/config.users" ] && . "$PWD/config.users"
+[ -f "$PWD/config.user" ] && . "$PWD/config.user"
 
 echo using the following values:
 echo "inputPA=$inputPA"
