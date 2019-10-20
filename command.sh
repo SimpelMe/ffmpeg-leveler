@@ -46,4 +46,4 @@ ffmpeg -hide_banner $inputLoglevel \
     -metadata:s:a:4 title="Translator limited" \
     -metadata:s:a:5 title="Translator gated" \
     -metadata:s:a:6 title="PA levelled" \
-    -c:a pcm_s16le -f matroska pipe: | ffplay -
+    -c:a pcm_s16le -f matroska pipe: | ffplay -hide_banner -
