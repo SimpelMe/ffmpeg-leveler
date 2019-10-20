@@ -6,7 +6,7 @@ ffmpeg -thread_queue_size 8291 -filter_complex_threads 64 \
 dynaudnorm=p=0.35:r=1:f=300 , asplit=2 [pa2ebu] [pa_dyn_abhoere] ;\
 [pa2ebu] ebur128=meter=18:video=1:size=640x480:scale=relative:gauge=s:target=-16 [vid_pa_ebu] [pa_ebu] ;\
 [1:a:0] asetpts=N/SR/TB, \
-compand=attacks=0:points=-80/-115|-45.1/-80|-45/-45|20/20 , asplit=2 [trans_gate_out] [trans_gate_abhoere] ;\
+compand=attacks=0:points=-80/-115|-55.1/-80|-55/-55|20/20 , asplit=2 [trans_gate_out] [trans_gate_abhoere] ;\
 [trans_gate_out] compand=attacks=0:points=-80/-80|-12/-12|20/-12 , asplit=2 [trans_lim_out] [trans_lim_abhoere] ;\
 [trans_lim_out] dynaudnorm=p=0.35:r=1:f=300 , asplit=2 [trans2ebu] [trans_dyn_abhoere] ;\
 [trans2ebu] ebur128=meter=18:video=1:size=640x480:scale=relative:gauge=s:target=-16 [vid_trans_ebu] [trans_ebu] ;\
