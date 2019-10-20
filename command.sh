@@ -9,9 +9,9 @@ echo "$inputLoglevel"
 
 ffmpeg -hide_banner $inputLoglevel \
 -thread_queue_size 8291 -filter_complex_threads 64 \
-$inputStarttime $inputPA \
+$inputStarttime -i $inputPA \
 -thread_queue_size 8192 \
-$inputStarttime $inputDolm \
+$inputStarttime -i $inputDolm \
 -filter_complex "[0:a:0] asetpts=N/SR/TB,\
 dynaudnorm=p=0.35:r=1:f=300 , asplit=2 [pa2ebu] [pa_dyn_abhoere] ;\
 [pa2ebu] ebur128=meter=18:video=1:size=640x480:scale=relative:gauge=s:target=-16 [vid_pa_ebu] [pa_ebu] ;\
