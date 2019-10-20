@@ -1,10 +1,10 @@
-inputPA=$(<inputPA.txt)
+inputPA=$(head -n 1 inputPA.txt)
 echo "$inputPA"
-inputDolm=$(<inputDolm.txt)
+inputDolm=$(head -n 1 inputDolm.txt)
 echo "$inputDolm"
-inputStarttime=$(<inputStarttime.txt)
+inputStarttime=$(head -n 1 inputStarttime.txt)
 echo "$inputStarttime"
-inputLoglevel=$(<inputLoglevel.txt)
+inputLoglevel=$(head -n 1 inputLoglevel.txt)
 echo "$inputLoglevel"
 
 ffmpeg -hide_banner $inputLoglevel \
