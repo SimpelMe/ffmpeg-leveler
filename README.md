@@ -31,7 +31,9 @@ You can toggle through different audio outputs. If you use mpv you can switch wi
 6. Translator gated
 7. PA levelled
 
-__Currently if switching from one to another audio stream it takes about 12 seconds until the new audio is playing.__ This is a known issue.
+__Currently if switching from one to another audio stream it takes about 12 seconds until the new audio is playing.__
+This is a known issue.
+See also [#1](/../../issues/1)
 
 
 ## Note
