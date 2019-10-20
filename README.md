@@ -36,5 +36,5 @@ You can toggle through different audio outputs. If you use ffplay you can switch
 ## Note
 If you need some audio files you can use the following ones, which are from the __Infrastructure Review__ at 35c3 in Leipzig 2009.
 
-PA: http://simpel.cc/temp/PA-orig.wav  
-Translator: http://simpel.cc/temp/Dolm1-orig.wav
+PA: https://simpel.cc/temp/PA-orig.wav  
+Translator: https://simpel.cc/temp/Dolm1-orig.wav
