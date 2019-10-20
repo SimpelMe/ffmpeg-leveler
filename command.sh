@@ -9,7 +9,7 @@ echo using the following values:
 echo "inputPA=$inputPA"
 echo "inputDolm=$inputDolm"
 echo "inputStarttime=$inputStarttime"
-echo "inputLogLevel=$inputLoglevel"
+echo "logLevel=$loglevel"
 echo "para_pa_leveler=$para_pa_leveler"
 echo "para_trans_gate=$para_trans_gate"
 echo "para_trans_limiter=$para_trans_limiter"
@@ -21,7 +21,7 @@ echo "para_mix_loudnorm=$para_mix_loudnorm"
 echo "para_ebur128=$para_ebur128"
 echo
 
-ffmpeg -hide_banner $inputLoglevel \
+ffmpeg -hide_banner $loglevel \
     -thread_queue_size 8291 -filter_complex_threads 64 \
     $inputStarttime -i "$inputPA" \
     -thread_queue_size 8192 \

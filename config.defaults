@@ -10,7 +10,7 @@ inputDolm="specimen/Dolm1-orig.wav"
 inputStarttime="-ss 75"
 
 # possible options: quiet, panic, fatal, error, warning, info. verbose. debug, trace
-inputLoglevel="-loglevel warning"
+loglevel="-loglevel warning"
 
 ### Filter Parameter
 ## PA
