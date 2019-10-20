@@ -35,11 +35,11 @@ testsrc=size=640x480[clock];\
 -map "[ebu_combined]" -c:v mpeg2video -g:0 10 -bf:0 0 -q:0 4 \
 -map "[mix_loud_out]" -map "[mix_dyn_out]" -map "[mix_abhoere]" -map "[trans_dyn_abhoere]" \
 -map "[trans_lim_abhoere]" -map "[trans_gate_abhoere]" -map "[pa_dyn_abhoere]" \
--metadata:s:a:0 title="Output R128" \
--metadata:s:a:1 title="Mix levelled not R128" \
--metadata:s:a:2 title="Mix not levelled" \
--metadata:s:a:3 title="Dolmetscher levelled" \
--metadata:s:a:4 title="Dolmetscher limitiert" \
--metadata:s:a:5 title="Dolmetscher gated" \
+-metadata:s:a:0 title="Output - gained to -16LUFS" \
+-metadata:s:a:1 title="Mix ducked" \
+-metadata:s:a:2 title="Mix unducked" \
+-metadata:s:a:3 title="Translator levelled" \
+-metadata:s:a:4 title="Translator limited" \
+-metadata:s:a:5 title="Translator gated" \
 -metadata:s:a:6 title="PA levelled" \
 -c:a pcm_s16le -f matroska pipe: | ffplay -
