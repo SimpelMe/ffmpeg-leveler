@@ -1,0 +1,10 @@
+# path to PA and translator tracks
+inputPA="specimen/PA-orig.wav"
+inputDolm="specimen/Dolm1-orig.wav"
+
+# possible options: -ss SECs
+inputStarttime="-ss 75"
+
+# possible options: quiet, panic, fatal, error, warning, info. verbose. debug, trace
+inputLoglevel="-loglevel warning"
+

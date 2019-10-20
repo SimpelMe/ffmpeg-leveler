@@ -1,17 +1,21 @@
-inputPA=$(head -n 1 inputPA.txt)
-echo "$inputPA"
-inputDolm=$(head -n 1 inputDolm.txt)
-echo "$inputDolm"
-inputStarttime=$(head -n 1 inputStarttime.txt)
-echo "$inputStarttime"
-inputLoglevel=$(head -n 1 inputLoglevel.txt)
-echo "$inputLoglevel"
+#!/bin/sh
+
+# Source files with all default settings
+. "$PWD/config.defaults"
+# source optional users custom config
+[ -f "$PWD/config.users" ] && . "$PWD/config.users"
+
+echo using the following values:
+echo "inputPA=$inputPA"
+echo "inputDolm=$inputDolm"
+echo "inputStarttime=$inputStarttime"
+echo "inputLogLevel=$inputLoglevel"
 
 ffmpeg -hide_banner $inputLoglevel \
 -thread_queue_size 8291 -filter_complex_threads 64 \
-$inputStarttime -i $inputPA \
+$inputStarttime -i "$inputPA" \
 -thread_queue_size 8192 \
-$inputStarttime -i $inputDolm \
+$inputStarttime -i "$inputDolm" \
 -filter_complex "[0:a:0] asetpts=N/SR/TB,\
 dynaudnorm=p=0.35:r=1:f=300 , asplit=2 [pa2ebu] [pa_dyn_abhoere] ;\
 [pa2ebu] ebur128=meter=18:video=1:size=640x480:scale=relative:gauge=s:target=-16 [vid_pa_ebu] [pa_ebu] ;\
