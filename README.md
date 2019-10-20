@@ -15,10 +15,10 @@ locations, override the values by adding the settings to the `config.user` file.
 
 ### Config key overview
 
-$inputPA - audio to duck
-$inputDolm - translator above ducked pa
-$inputStarttime - default 75s, because recording was starting before talk
-$inputLoglevel - default warning, use the ffmpeg options
+* $inputPA - audio to duck
+* $inputDolm - translator above ducked pa
+* $inputStarttime - default 75s, because recording was starting before talk
+* $inputLoglevel - default warning, use the ffmpeg options
 
 ## Flowchart
 The flowchart.md shows the audio flow excluding the points where to listen to.
@@ -36,5 +36,5 @@ You can toggle through different audio outputs. If you use ffplay you can switch
 ## Note
 If you need some audio files you can use the following ones, which are from the __Infrastructure Review__ at 35c3 in Leipzig 2009.
 
-PA: https://simpel.cc/temp/PA-orig.wav  
-Translator: https://simpel.cc/temp/Dolm1-orig.wav
+* PA: https://simpel.cc/temp/PA-orig.wav
+* Translator: https://simpel.cc/temp/Dolm1-orig.wav
