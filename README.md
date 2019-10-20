@@ -22,7 +22,7 @@ inputLoglevel - default warning, use the ffmpeg options
 The flowchart.md shows the audio flow excluding the points where to listen to.
 
 ## Listening
-You can toggle through different audio outputs. If you use mpv you can switch with the `#`-key.  
+You can toggle through different audio outputs. If you use ffplay you can switch with the `a`-key.  
 1. Output - gained to -16LUFS according EBU R128
 2. Mix ducked
 3. Mix unducked
@@ -30,11 +30,6 @@ You can toggle through different audio outputs. If you use mpv you can switch wi
 5. Translator limited
 6. Translator gated
 7. PA levelled
-
-__Currently if switching from one to another audio stream it takes about 12 seconds until the new audio is playing.__
-This is a known issue.
-See also [#1](/../../issues/1)
-
 
 ## Note
 If you need some audio files you can use the following ones, which are from the __Infrastructure Review__ at 35c3 in Leipzig 2009.

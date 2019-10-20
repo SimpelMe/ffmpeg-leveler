@@ -42,4 +42,4 @@ testsrc=size=640x480[clock];\
 -metadata:s:a:4 title="Dolmetscher limitiert" \
 -metadata:s:a:5 title="Dolmetscher gated" \
 -metadata:s:a:6 title="PA levelled" \
--c:a pcm_s16le -f matroska pipe: | mpv --no-cache -
+-c:a pcm_s16le -f matroska pipe: | ffplay -
