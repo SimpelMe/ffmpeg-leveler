@@ -1,7 +1,14 @@
+inputPA=$(<inputPA.txt)
+echo "$inputPA"
+inputDolm=$(<inputDolm.txt)
+echo "$inputDolm"
+inputStarttime=$(<inputStarttime.txt)
+echo "$inputStarttime"
+
 ffmpeg -thread_queue_size 8291 -filter_complex_threads 64 \
--ss 75 -i /Users/cox/Downloads/dynaudnorm/PA-orig.wav \
+$inputStarttime $inputPA \
 -thread_queue_size 8192 \
--ss 75 -i /Users/cox/Downloads/dynaudnorm/Dolm2-orig.wav \
+$inputStarttime $inputDolm \
 -filter_complex "[0:a:0] asetpts=N/SR/TB,\
 dynaudnorm=p=0.35:r=1:f=300 , asplit=2 [pa2ebu] [pa_dyn_abhoere] ;\
 [pa2ebu] ebur128=meter=18:video=1:size=640x480:scale=relative:gauge=s:target=-16 [vid_pa_ebu] [pa_ebu] ;\
