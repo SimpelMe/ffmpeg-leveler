@@ -17,7 +17,7 @@ loglevel="-loglevel warning"
 # if pa input is levelled to high decrease level
 para_pa_pregain="0.01"
 # parameter dynaudnorm
-para_pa_leveler="p=0.35:r=1:f=300:m=5:g=31:t=0"
+para_pa_leveler="p=0.35:r=1:f=300:m=5:g=31"
 
 ## TRANSLATOR
 # parameter compand as gate
