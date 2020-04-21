@@ -7,15 +7,17 @@ inputPA="specimen/PA-orig.wav"
 inputDolm="specimen/Dolm1-orig.wav"
 
 # possible options: -ss SECs
-inputStarttime="-ss 75"
+inputStarttime="-ss 00"
 
 # possible options: quiet, panic, fatal, error, warning, info. verbose. debug, trace
 loglevel="-loglevel warning"
 
 ### Filter Parameter
 ## PA
+# if pa input is levelled to high decrease level
+para_pa_pregain="0.01"
 # parameter dynaudnorm
-para_pa_leveler="p=0.35:r=1:f=300"
+para_pa_leveler="p=0.35:r=1:f=300:m=5:g=31:t=0"
 
 ## TRANSLATOR
 # parameter compand as gate
@@ -31,9 +33,14 @@ para_mix_vol_pa="0.1"
 para_mix_vol_trans="1.0"
 # parameter dynaudnorm
 para_mix_leveler="p=0.35:r=1:f=300"
-# paramter loudnorm
+# parameter loudnorm
 para_mix_loudnorm="i=-16.0:lra=12.0:tp=-3.0"
 
 ## VIEW
 # parameter for the 3 ebur128 views
 para_ebur128=meter=18:video=1:size=640x480:scale=relative:gauge=s:target=-16
+
+## OUTPUT
+# possible options: pipe: | ffplay -hide_banner -
+# or output.wav
+para_output="pipe: | ffplay -hide_banner -"
