@@ -3,3 +3,4 @@
 *.mp4
 config.user
 specimen/
+*to_icecast.sh
