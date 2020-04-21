@@ -5,7 +5,7 @@ This repo tries to automate levelling and ducking with a ffmpeg command line.
 With this you can possibly automate translator ducking.
 
 ## Execute
-`./command.sh`
+`./ducking.sh`
 
 ## Options
 You have to specify the input files. The first one is the audio that should be ducked if there is level from the second audio file.
